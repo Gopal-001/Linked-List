@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
-struct node
+class node
 {
+    private:
     int data;
     struct node *next;
 }*head,*newnode,*temp;
@@ -11,7 +12,7 @@ int main()
     int choice=1;
     while(choice)
     {
-    newnode=(struct node*)malloc(sizeof(struct node));
+    newnode=;new Node();
     cout<<"enter data\n";
     cin>>newnode->data;
     newnode->next=0;
@@ -26,13 +27,9 @@ int main()
         temp=newnode;
     }
     cout<<"do you want to continue\n";
+    cout<<"press 1 to continue or 0 to exit\n";
     cin>>choice;
     }
-    cout<<"enter the node to insert at beginning\n";
-    newnode=(struct node*)malloc(sizeof(struct node));
-    cin>>newnode->data;
-    newnode->next=head;
-    head=newnode;
     temp=head;
     while(temp!=0)
     {
